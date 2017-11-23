@@ -1,1 +1,1 @@
-# go-thesis-18-kay-
+# go-theses-18-kay-cross-modal-design
