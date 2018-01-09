@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>CMD</title>
+   <script src='jquery-3.2.1.min.js'></script>
+   <script type="text/javascript">
+    $(document).bind("mobileinit", function () {
+        $.event.special.tap.tapholdThreshold = 300;
+    });
+</script>
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet">
+   <script>
+   $(document).ready(function() {
+      var mouseX = 0,
+         mouseY = 0;
+      $(document).mousemove(function(e) {
+         mouseX = e.pageX;
+         mouseY = e.pageY;
+      });
+      var follower = $("#follower");
+      var xp = 0,
+         yp = 0;
+      var loop = setInterval(function() {
+         xp += (mouseX - xp);
+         yp += (mouseY - yp);
+         follower.css({
+            left: xp,
+            top: yp
+         });
+      }, 0);
+   });
+</script>
+  
+</head>
+
+<body>
+<audio id="beepOn" src="beep_short_on.wav" autostart="false" ></audio>
+<audio id="beepOff" src="beep_short_off.wav" autostart="false" ></audio>
+<audio id="click" src="digi_plink.wav" autostart="false" ></audio>
+
+
+
+<div id="follower"></div>
+
+
+   <article>
+   <!-- <div class="speechButton"  id='S1'>&#x2706;</div> -->
+      <!-- <h1 id="Main Title, Cross Modal Design">CROSS MODAL DESIGN</h1>
+      <h1 id="braille"><font style="font-size:160px;">CROSS MODAL DESIGN</font></h1>
+      <h2 id="Abstract">Abstract</h2>
+      <h2 id="braille"><font style="font-size:45px;">Abstract</font></h2>
+      <p id="abstract, paragraph,1">We live in a visually oriented culture. Especially for those, including myself, who pursue the job of a designer. For us whose practice consists of almost only visual purposes, it is crucial we question the importance of that particular perception we use the most. Graphic design is usually described as visual-communication. </p>
+      <p id="braille">We live in a visually oriented culture. Especially for those, including myself, who pursue the job of a designer. For us whose practice consists of almost only visual purposes, it is crucial we question the importance of that particular perception we use the most. Graphic design is usually described as visual-communication. </p>
+      <p id="abstract, paragraph,2">However, in our daily lives, we use vision in combination with hearing in order to interact with one another. This profession brings a lot of visual conditions on top of our already existing pictorial obsession. Seeing is part of a collective unconsciousness we all share. I want to find out what caused this shift and if there are any alternatives to the current sensory hierarchy. </p>
+      <p id="braille">However, in our daily lifes, we use vision in combination with hearing in order to interact with one another. This profession brings a lot of visual conditions on top of our already existing pictorial obsession. Seeing is part of a collective unconsciousness we all share. I want to find out what caused this shift and if there are any alternatives to the current sensory hierarchy. </p>
+      <p id="abstract, paragraph,3">Is this notion of visual domination true or is it merely an assumption? What happens when one of our sense organs stops functioning and what are the right substitutions for it. My main goal of writing this text is to find out how vision can possibly make room for other senses. Perhaps limiting our focus on vision will make us see better.</p>
+      <p id="braille">Is this notion of visual domination true or is it merely an assumption? What happens when one of our sense organs stops functioning and what are the right substitutions for it. My main goal of writing this text is to find out how vision can possibly make room for other senses. Perhaps limiting our focus on vision will make us see better.</p> -->
+      <p id="figure 1"><br><img src='texas_chain.jpg'><font style="font-size:0px">Figure 1<br> displaying a poster of the movie Texas Chain Massacre. It includes a big tearing eye in the center of the poster. Within the iris there is a reflection of a figure holding a chain saw walking towards you. Under the eye, the title Texas Chain Massacre is displayed in a rough script font.</font> </p>
+      
+   </article>
+    <article>
+   <!-- <div class="speechButton"  id='S1'>&#x2706;</div> -->
+      
+      <h2 id="Chapter One, See">See</h2>
+      <h2 id="braille"><font style="font-size:45px">See</font></h2>
+      <p id="See, paragraph,1">We see to believe, we see to understand and we see to justify. We believe our seeing is proof positive. We are relying on our sense of vision to capture the action or mood. The act of seeing is widely used in language, sayings and symbolism; Let's see, I see, I see what you mean, I see what you did there, I see where you're coming from, First see, then believe, See for yourself, You see?, See you!</p>
+      <p id="braille">We see to believe, we see to understand and we see to justify. We believe our seeing is proof positive. We are relying on our sense of vision to capture the action or mood. The act of seeing is widely used in language, sayings and symbolism; Let's see, I see, I see what you mean, I see what you did there, I see where you're coming from, First see, then believe, See for yourself, You see?, See you!</p>
+      <!-- <p id="See, paragraph,2">However, in our daily lifes, we use vision in combination with hearing in order to interact with one another. This profession brings a lot of visual conditions on top of our already existing pictorial obsession. Seeing is part of a collective unconsciousness we all share. I want to find out what caused this shift and if there are any alternatives to the current sensory hierarchy. </p>
+      <p id="See, paragraph,3">Is this notion of visual domination true or is it merely an assumption? What happens when one of our sense organs stops functioning and what are the right substitutions for it. My main goal of writing this text is to find out how vision can possibly make room for other senses. Perhaps limiting our focus on vision will make us see better.</p> -->
+      <!-- <p id="figure 1"><img src='texas_chain.jpg'><font style="font-size:0px">Figure one, displaying a poster of the movie Texas Chain Massacre. It includes a big tearing eye in the center of the poster. Within the iris there is a reflection of a figure holding a chain saw walking towards you. Under the eye, the title Texas Chain Massacre is displayed in a rough script font.</font> </p> -->
+   </article>
+   
+
+
+</div>
+
+
+
+<span id="word" style="color:blue;"></span><br><br>
+<div id="panel" >
+
+</div>
+<script>
+
+</script>
+
+   <script type="text/javascript">
+$('p, h1, h2').mouseover(function() {
+   var click = new Audio("digi_plink.wav");
+   $('#follower').css('border-color', 'red');
+
+  click.play();
+});
+
+   $('*').mousedown(function() {
+     // speechSynthesis.pause(idd);
+     // speechSynthesis.resume(idd);
+   console.log(this.id);
+$('#follower').css('background-color', 'red');
+
+   var idd = new SpeechSynthesisUtterance(this.id);
+
+   idd.rate = 1.8;
+   idd.volume = 0.6;
+
+   speechSynthesis.speak(idd);
+});
+
+   $('*').mouseup(function() {$('#follower').css('background-color', 'transparent');
+
+    });
+
+      var utterance = new SpeechSynthesisUtterance();
+var wordIndex = 0;
+var global_words = [];
+utterance.lang = 'en-UK';
+utterance.rate = 1;
+utterance.volume = 0.6;
+
+$(function(){
+  $( "p, h1, h2" ).bind( "taphold", tapholdHandler );
+
+ 
+  function tapholdHandler( event ){
+   beepOn.play();
+          
+          
+      
+    console.log('hold');
+    $.event.special.tap.tapholdThreshold = 3000;
+  $('#panel').css('opacity', '1');
+
+    var ori = $(this);
+    var text    = $(this).text();
+    console.log(text);
+    var words   = text.split(" ");
+    global_words = words;
+    // Draw the text in a div
+    drawTextInPanel(words);
+    spokenTextArray = words;
+    utterance.text = text;
+    speechSynthesis.speak(utterance);
+
+    utterance.onboundary = function(event){
+   var e = ori;
+   var word = getWordAt(e.innerHTML,event.charIndex);
+   console.log(word)
+    // Show Speaking word : x
+   // document.getElementById("word").innerHTML = word;
+    //Increase index of span to highlight
+    // console.info(global_words[wordIndex]);
+    
+    try{
+      document.getElementById("word_span_"+wordIndex).style.color = "yellow";
+
+    }catch(e){}
+    
+    wordIndex++;
+  };
+
+
+utterance.onend = function(){
+      document.getElementById("word").innerHTML = "";
+    wordIndex = 0;
+    document.getElementById("panel").innerHTML = "";
+    $('#panel').css('opacity', '0');
+    beepOff.play();
+};
+
+// Get the word of a string given the string and the index
+function getWordAt(str, pos) {
+    // Perform type conversions.
+    str = String(str);
+    pos = Number(pos) >>> 0;
+
+    // Search for the word's beginning and end.
+    var left = str.slice(0, pos + 1).search(/\S+$/),
+        right = str.slice(pos).search(/\s/);
+
+    // The last word in the string is a special case.
+    if (right < 0) {
+        return str.slice(left);
+    }
+    // Return the word, using the located bounds to extract it from the string.
+    return str.slice(left, right + pos);
+}
+
+function drawTextInPanel(words_array){
+console.log("start");
+      var panel = document.getElementById("panel");
+   for(var i = 0;i < words_array.length;i++){
+      var html = '<span id="word_span_'+i+'">'+words_array[i]+'</span>&nbsp;';
+      panel.innerHTML += html;
+    }
+}
+
+  }
+});
+
+$('*').mouseout(function() {
+  $('#follower').css('border-color', '#999');
+});
+   </script>
+
+
+   <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+</body>
+
+</html>
