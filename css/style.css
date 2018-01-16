@@ -289,7 +289,8 @@ position:fixed;
 @media print {
  #container2{display:none;}
 
-   .p0{font-size:10vh;top:0;line-height:10vh;margin-bottom:100vh;}
+   .p0{font-size:10vh;top:0;line-height:10vh;margin-bottom:100vh;-webkit-text-stroke-width: 0px;width:100vw;color:black;word-break: normal;}
+   .p1{-webkit-text-stroke-width: 0px;width:100vw;color:black;word-break:normal;padding:0;}
    #particles{display:none;}
    .body{font-size:16pt;text-align:left;line-height: normal;}
 span{padding:5px;}
@@ -305,11 +306,12 @@ span{padding:5px;}
       right:1px;
       width:90vw;
       line-height:normal;
+      word-break: normal;
       /*text-align:right;*/
 
    }
 
-   #braille img{width:90vw;}
+   #braille img{width:60vw;text-align:center;}
 
    #braille h1{
       font-size:620pt!important;
